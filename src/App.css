@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.form-control{
+  font-size: larger;
+  border-radius: 4px;
+}
+.result{
+  font-size: large;
+}
+
+.btn-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns, each taking up equal space */
+  grid-gap: 10px; /* Space between buttons */
+  max-width: 200px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container */
+}
+.btn-container button{
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+.btn-container button:hover {
+  background-color: #d0d0d0; /* Slightly darker grey on hover */
+}
+.btn-container button:active {
+  background-color: #a0a0a0; /* Even darker grey when clicked */
+}
+
+.btn-container button:nth-child(15) { /* Equal button */
+  grid-column: span ; /* Make the equal button span across 2 columns */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+}
+
+.btn-container button:nth-child(13) { /* Clear button */
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+}
